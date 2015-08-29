@@ -1,7 +1,6 @@
 package org.junit.internal.matchers;
 
 import org.hamcrest.Description;
-import org.hamcrest.Factory;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
 
@@ -45,7 +44,6 @@ public class ThrowableCauseMatcher<T extends Throwable> extends
      * @param matcher to apply to the cause of the outer exception
      * @param <T> type of the outer exception
      */
-    @Factory
     public static <T extends Throwable> Matcher<T> hasCause(final Matcher<? extends Throwable> matcher) {
         return new ThrowableCauseMatcher<T>(matcher);
     }

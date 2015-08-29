@@ -1,7 +1,6 @@
 package org.junit.internal.matchers;
 
 import org.hamcrest.Description;
-import org.hamcrest.Factory;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
 
@@ -30,7 +29,6 @@ public class ThrowableMessageMatcher<T extends Throwable> extends
         matcher.describeMismatch(item.getMessage(), description);
     }
 
-    @Factory
     public static <T extends Throwable> Matcher<T> hasMessage(final Matcher<String> matcher) {
         return new ThrowableMessageMatcher<T>(matcher);
     }

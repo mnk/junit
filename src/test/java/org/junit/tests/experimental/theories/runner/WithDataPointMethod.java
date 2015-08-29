@@ -108,7 +108,7 @@ public class WithDataPointMethod {
         return JUnitCore.runClasses(type).getFailures();
     }
 
-    private Matcher<Iterable<Failure>> empty() {
+    private Matcher<Iterable<? extends Failure>> empty() {
         return everyItem(nullValue(Failure.class));
     }
 }
